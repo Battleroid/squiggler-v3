@@ -17,15 +17,15 @@ index:
   # Method for finding patterns; choices are "ilm" or "data stream"
   origin: 'ilm'
 
-  # Template for the pattern prefixed with the prefix or cluster name
-  # e.g. 'cluster*:your-pattern-*'
+  # Template for the pattern, combined with cluster_prefix for {cluster_prefix}:{template}
+  # e.g. 'custom-prefix-{name}-*'
   template: '{name}-*'
 
   # Prefix to affix to all patterns instead of the cluster name, useful
   # if you have several clusters named the same, for sharding, optionally
   # specify "{cluster}" to affix the cluster name within the prefix instead
   # of a hard value
-  cluster_prefix: 'cluster*'
+  cluster_prefix: '{cluster}'
 
   # Prefixes to ignore when looking for patterns
   ignore_prefix:
