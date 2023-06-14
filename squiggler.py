@@ -174,7 +174,7 @@ def get_data_stream_patterns(es):
         patterns.add(stream["name"])
     return patterns
 
-
+# TODO: it'd be worthwhile converting most of this to yields to cut down on memory usage possibly
 def main(args):
     # Setup
     config = parse_config(args.CONFIG)
